@@ -1,49 +1,28 @@
-﻿import { useState } from "react"
+﻿import { Route, Routes } from "react-router-dom"
 import "./App.css"
-import { expeditionData, countCompleted } from "./expeditionData"
 import Header from "./components/Header"
-import FilterControls from "./components/FilterControls"
-import ExpeditionList from "./components/ExpeditionList"
+import Navigation from "./components/Navigation"
 import Footer from "./components/Footer"
+import HomeView from "./views/HomeView"
+import ExpeditionsView from "./views/ExpeditionsView"
+import ExpeditionDetailView from "./views/ExpeditionDetailView"
+import NotFoundView from "./views/NotFoundView"
 
 function App() {
-  const [selectedStatus, setSelectedStatus] = useState("All")
-
-  const completedCount = countCompleted(expeditionData)
-
-  const visibleExpeditions =
-    selectedStatus === "All"
-      ? expeditionData
-      : expeditionData.filter(
-          (expedition) => expedition.status === selectedStatus
-        )
-
-  const visibleCount = visibleExpeditions.length
-
-  function handleStatusChange(status) {
-    setSelectedStatus(status)
-  }
-
   return (
     <main className="page">
       <Header />
+      <Navigation />
 
-      <section className="summary-card">
-        <h2>Expedition Summary</h2>
-        <p>
-          Completed expeditions: <strong>{completedCount}</strong>
-        </p>
-        <p>
-          Expeditions shown: <strong>{visibleCount}</strong>
-        </p>
-      </section>
-
-      <FilterControls
-        selectedStatus={selectedStatus}
-        onStatusChange={handleStatusChange}
-      />
-
-      <ExpeditionList expeditions={visibleExpeditions} />
+      <Routes>
+        <Route path="/" element={<HomeView />} />
+        <Route path="/expeditions" element={<ExpeditionsView />} />
+        <Route
+          path="/expeditions/:id"
+          element={<ExpeditionDetailView />}
+        />
+        <Route path="*" element={<NotFoundView />} />
+      </Routes>
 
       <Footer />
     </main>

@@ -103,3 +103,73 @@ h1 {
   color: #9aa8b5;
   text-align: center;
 }
+
+.main-nav {
+  display: flex;
+  gap: 12px;
+  margin-top: 18px;
+  padding: 16px 20px;
+  border: 1px solid #3f5d43;
+  background: #121a21;
+}
+
+.main-nav a {
+  padding: 8px 14px;
+  color: #c8d2dc;
+  text-decoration: none;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  color: #92e875;
+  background: #203126;
+}
+
+.view-section {
+  margin-top: 28px;
+}
+
+.view-section > h2 {
+  margin-top: 0;
+}
+
+.expedition-card a {
+  color: #92e875;
+}
+
+.details-link,
+.primary-link {
+  display: inline-block;
+  margin-top: 14px;
+  color: #92e875;
+  text-decoration: none;
+}
+
+.details-link:hover,
+.primary-link:hover {
+  text-decoration: underline;
+}
+
+.detail-card {
+  margin: 20px 0;
+  padding: 28px;
+  border-left: 5px solid #92e875;
+  background: #162129;
+}
+
+.detail-card h2 {
+  margin-top: 0;
+  color: #92e875;
+}
+
+.detail-label {
+  color: #92e875;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.not-found {
+  padding: 28px;
+  background: #162129;
+}

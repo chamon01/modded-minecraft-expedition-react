@@ -23,3 +23,13 @@ npm run build
 
 Preview the production build:
 npm run preview
+
+## Homework 11 Route Plan
+
+| URL | View |
+| --- | --- |
+| `/` | Home / landing page |
+| `/expeditions` | Expedition list and filters |
+| `/expeditions/:id` | Details for one expedition |
+
+The application uses client-side routing so users can move between views without a full page reload.
