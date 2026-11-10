@@ -173,3 +173,63 @@ h1 {
   padding: 28px;
   background: #162129;
 }
+
+.main-nav {
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.main-nav button,
+.auth-panel button,
+.detail-card button {
+  background: #203126;
+  border: 1px solid #92e875;
+  color: #92e875;
+  padding: 9px 16px;
+  cursor: pointer;
+}
+
+.main-nav button:hover,
+.auth-panel button:hover,
+.detail-card button:hover {
+  background: #304936;
+}
+
+.login-state {
+  color: #b9c6d1;
+  font-size: 0.9rem;
+}
+
+.auth-panel {
+  max-width: 560px;
+  padding: 24px;
+  background: #162129;
+  border: 1px solid #3f5d43;
+}
+
+.auth-panel form {
+  display: grid;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.auth-panel label {
+  font-weight: bold;
+}
+
+.auth-panel input {
+  padding: 12px;
+  background: #0b1219;
+  color: white;
+  border: 1px solid #526674;
+}
+
+.auth-warning {
+  color: #ffbd73;
+  margin: 14px 0;
+}
+
+.auth-success {
+  color: #92e875;
+  font-weight: bold;
+}
